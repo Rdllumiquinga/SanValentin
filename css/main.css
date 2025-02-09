@@ -1,0 +1,110 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-image: url("/src/main-background.png");
+    background-size: cover;
+}
+
+.r-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8em;
+}
+
+.r-main-header{
+    font-size: 60px;
+    color: #7d001a;
+}
+
+.r-image-home{
+    width: 500px;
+}
+
+.r-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+button{
+    position: relative;
+    width: 30%;
+    margin: 20px;
+    padding: 25px 60px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease-in
+}
+
+button svg{
+    position: absolute;
+    top: 8%;
+    right: 0;
+    font-size: 60px;
+}
+
+button:hover svg{
+    right: 35%;
+}
+
+button:hover span{
+    opacity: 0;
+}
+
+button.r-button-yes{
+    background: #fddfe5;
+    border: 3px solid #fddfe5;
+}
+
+button.r-button-yes:hover{
+    background: #c3213c;
+    border: 3px solid #c3213c;
+}
+
+button.r-button-yes svg{
+    color: #bf122fed;
+    animation: palpitar 2s infinite ease-in-out;
+}
+
+button.r-button-yes:hover, button.r-button-yes:hover svg{
+    color: #fddfe5;
+}
+
+button:hover.r-button-yes svg{
+    animation: palpitar 0.5s infinite ease-in-out;
+}
+
+button.r-button-no{
+    background: #dbdbdb;
+    border: 3px solid #c7c3c4;
+    opacity: 0.8;
+}
+
+button.r-button-no svg{
+    color: #ddb6b6ed;
+}
+
+.margin-right{
+    margin-right: 10px;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+@keyframes palpitar {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
