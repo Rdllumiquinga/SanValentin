@@ -15,11 +15,22 @@
     <link rel="stylesheet" href="css/FontAwesome/all.min.css">
 </head>
 
-<body>
+<body class="hidden">
     <div class="r-container">
-        <div class="r-main-header">Quieres ser mi San Valentin?</div>
-        <img class="r-image-home" src="src/main-image-2.gif"></img>
-        <div class="r-buttons">
+        <div class="r-main-header r-initial">Quieres ser mi San Valentin?</div>
+        <img class="r-image-home r-initial" src="src/main-image-2.png"></img>
+        
+        <div class="r-main-header r-accept-items">Ahora somos San Valentines unidos<br>
+            hoy, mañana y toda la vida 
+            <i class="fa-regular fa-face-kiss-wink-heart"></i>
+        </div>
+        <div class="r-container-images r-accept-items">
+            <img class="r-image-home" src="src/osos-amor.png"></img>
+            <img class="r-image-float" src="src/love-you.png"></img>
+        </div>
+        <img class="r-image-home r-deny-items" src=""></img>
+
+        <div class="r-buttons r-initial">
             <button class="r-button-yes clickable">
                 <i class="fa-solid fa-heart margin-right"></i>
                 <span>Si</span>
@@ -29,6 +40,7 @@
                 <span>No</span>
             </button>
         </div>
+        
     </div>
 
 </body>

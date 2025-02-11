@@ -7,6 +7,32 @@ body{
     background-size: cover;
 }
 
+body.r-validation{
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.r-container-pass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f485a3;
+    font-size: 30px;
+}
+
+.r-input{
+    width: 50px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid #f485a3;
+    text-align: center;
+    font-size: 30px;
+}
+
 .r-container{
     display: flex;
     flex-direction: column;
@@ -15,13 +41,33 @@ body{
     margin-top: 8em;
 }
 
+.r-container.r-accept .r-initial, .r-container.r-deny .r-initial, .r-container .r-accept-items, .r-container .r-deny-items{
+    display: none;
+}
+
+.r-container.r-accept .r-accept-items, .r-container.r-deny .r-deny-items, .r-container.r-deny .r-buttons.r-initial{
+    display: block;
+}
+
 .r-main-header{
     font-size: 60px;
     color: #7d001a;
+    text-align: center;
 }
 
 .r-image-home{
     width: 500px;
+}
+
+.r-image-float{
+    position: absolute;
+    top: -40px;
+    right: -150px;
+    animation: heartbeat 1s infinite ease-in-out;
+}
+
+.r-container-images{
+    position: relative;
 }
 
 .r-buttons{
@@ -97,6 +143,14 @@ button.r-button-no svg{
     cursor: pointer;
 }
 
+.text-center{
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+
 @keyframes palpitar {
     0% {
       transform: scale(1);
@@ -107,4 +161,34 @@ button.r-button-no svg{
     100% {
       transform: scale(1);
     }
+}
+
+.confeti {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+    animation: confetiAnim 3s ease-out forwards;
+}
+
+@keyframes confetiAnim {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-90vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
