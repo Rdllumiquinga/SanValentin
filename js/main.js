@@ -3,7 +3,7 @@ $(document).ready(function(){
 let isValidated = localStorage.getItem("r-is-valited");
 debugger;
 if(isValidated == "false"){
-    window.location.assign("main.html");
+    window.location.assign("index.html");
 }else{
     $("body").removeClass('hidden');
 }

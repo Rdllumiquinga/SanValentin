@@ -13,7 +13,7 @@ $(document).ready(function(){
 
         if(inputValue=="031021"){
             localStorage.setItem("r-is-valited", true);
-            window.location.assign("index.html");
+            window.location.assign("love.html");
         }else{
             //
         }
