@@ -3,7 +3,7 @@ html{
 }
 
 body{
-    background-image: url("/src/main-background.png");
+    background-image: url("/SanValentin/src/main-background.png");
     background-size: cover;
 }
 
@@ -12,25 +12,52 @@ body.r-validation{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
+    height: 98%;
+}
+
+.r-validation-header{
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #d1335d;
+}
+
+.r-image-login{
+    height: 125px;
+    margin-bottom: 20px;
 }
 
 .r-container-pass{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #f485a3;
     font-size: 30px;
+    font-weight: bold;
 }
 
 .r-input{
     width: 50px;
     height: 60px;
-    margin: 5px;
+    margin: 2px;
     border-radius: 8px;
-    border: 1px solid #f485a3;
+    border: 5px solid #f485a3;
     text-align: center;
     font-size: 30px;
+    appearance: none;
+    -moz-appearance: none; /* Para Firefox */
+    -webkit-appearance: none; /* Para Safari y Chrome */
+}
+
+.r-validation-btn{
+    background: #eb4e78;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.r-validation-btn:hover{
+    background: #af1b42;
 }
 
 .r-container{
@@ -38,7 +65,7 @@ body.r-validation{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 8em;
+    margin-top: 4em;
 }
 
 .r-container.r-accept .r-initial, .r-container.r-deny .r-initial, .r-container .r-accept-items, .r-container .r-deny-items{
@@ -46,7 +73,7 @@ body.r-validation{
 }
 
 .r-container.r-accept .r-accept-items, .r-container.r-deny .r-deny-items, .r-container.r-deny .r-buttons.r-initial{
-    display: block;
+    display: inherit;
 }
 
 .r-main-header{
@@ -82,7 +109,7 @@ button{
     width: 30%;
     margin: 20px;
     padding: 25px 60px;
-    font-size: 20px;
+    font-size: 30px;
     border-radius: 10px;
     transition: 0.3s ease-in
 }
@@ -92,10 +119,12 @@ button svg{
     top: 8%;
     right: 0;
     font-size: 60px;
+    opacity: 0;
 }
 
 button:hover svg{
-    right: 35%;
+    width: 100%;
+    opacity: 1;
 }
 
 button:hover span{
@@ -192,3 +221,18 @@ button.r-button-no svg{
     75% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+
+
+@keyframes vibrar {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.vibrar {
+    animation: vibrar 0.3s ease-in-out 3; /* Repite 3 veces */
+}
+  

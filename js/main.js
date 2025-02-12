@@ -1,12 +1,20 @@
 $(document).ready(function(){
     
-let isValidated = localStorage.getItem("r-is-valited");
-debugger;
-if(isValidated == "false"){
-    window.location.assign("index.html");
-}else{
-    $("body").removeClass('hidden');
-}
+    let isValidated = localStorage.getItem("r-is-valited");
+    if(isValidated == "false"){
+        window.location.assign("index.html");
+    }else{
+        $("body").removeClass('hidden');
+    }
+
+    let badFrases = [
+        "Confia en mi, di que siii",
+        "Tu sabes que si quieres",
+        "No te arrepentiras",
+        "Tu y yo amandonos, piensalo",
+        "Todo será super lindo",
+        "Vamoos, el ultimo intento"
+    ];
 
     $(".r-button-yes").click(function(){
       $(this).closest('.r-container').addClass('r-accept');
@@ -48,6 +56,8 @@ if(isValidated == "false"){
         $(this).closest('.r-container').addClass('r-deny');
         var randomNumber = Math.floor(Math.random() * 3) + 1;
         $('img.r-deny-items').attr('src', `src/osos-amor-${randomNumber}.png`)
+        var randomNumberText = Math.floor(Math.random() * badFrases.length) + 1;
+        $(this).html(badFrases[randomNumberText]);
       });
 
   });
