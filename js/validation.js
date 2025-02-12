@@ -25,8 +25,6 @@ $(document).ready(function(){
     });
 
     $(".r-container-pass input").on('keyup', function (e) {
-        //delete key
-        debugger;
         let nextInput = $(this).next().length > 0 ? $(this).next()[0] : null;
         let previousInput = $(this).prev().length > 0 ? $(this).prev()[0] : null;
         if (e.keyCode == 8) {

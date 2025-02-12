@@ -17,8 +17,8 @@ $(document).ready(function(){
     ];
 
     $(".r-button-yes").click(function(){
-      $(this).closest('.r-container').addClass('r-accept');
-        debugger;
+      $(this).closest('.r-container').removeClass('r-deny').addClass('r-accept');
+        $(".confeti").remove();
         let totalConfeti = 30; // Cantidad de imágenes de confeti
         let mitad = totalConfeti / 2;
         let screenWidth = $(window).width();
@@ -48,12 +48,12 @@ $(document).ready(function(){
                 transform: `translate(${Math.random() * 200 - 100}px, -100vh) rotate(${Math.random() * 360}deg)`
             });
 
-            // setTimeout(() => img.remove(), 3000);
+            setTimeout(() => img.remove(), 3000);
         }
     });
 
     $(".r-button-no").click(function(){
-        $(this).closest('.r-container').addClass('r-deny');
+        $(this).closest('.r-container').removeClass('r-accept').addClass('r-deny');
         var randomNumber = Math.floor(Math.random() * 3) + 1;
         $('img.r-deny-items').attr('src', `src/osos-amor-${randomNumber}.png`)
         var randomNumberText = Math.floor(Math.random() * badFrases.length) + 1;

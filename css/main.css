@@ -19,6 +19,7 @@ body.r-validation{
     font-size: 40px;
     margin-bottom: 40px;
     color: #d1335d;
+    text-align: center;
 }
 
 .r-image-login{
@@ -236,3 +237,53 @@ button.r-button-no svg{
     animation: vibrar 0.3s ease-in-out 3; /* Repite 3 veces */
 }
   
+
+@media (max-width: 768px) {
+    body, .r-container{
+        height: 90%;
+    }
+
+    .r-container-pass{
+        font-size: 20px;
+    }
+
+    .r-input{
+        width: 30px;
+        height: 35px;
+    }
+
+    .r-image-home{
+        width: 300px;
+    }
+
+    .r-buttons {
+        flex-direction: column;
+    }
+
+    button{
+        position: relative;
+        width: 100%;
+        margin: 5px;
+        padding: 25px 60px;
+        font-size: 15px;
+        border-radius: 10px;
+        transition: 0.3s ease-in
+    }
+    
+    .r-main-header {
+        font-size: 40px;
+        color: #7d001a;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .r-container.r-accept .r-container-images{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .r-container.r-accept .r-container-images .r-image-float{
+        position: initial;
+    }
+
+}
