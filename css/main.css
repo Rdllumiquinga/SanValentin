@@ -253,7 +253,7 @@ button.r-button-no svg{
     }
 
     .r-image-home{
-        width: 300px;
+        width: 280px;
     }
 
     .r-buttons {
@@ -271,7 +271,7 @@ button.r-button-no svg{
     }
     
     .r-main-header {
-        font-size: 40px;
+        font-size: 30px;
         color: #7d001a;
         text-align: center;
         margin-top: 40px;
@@ -280,10 +280,13 @@ button.r-button-no svg{
     .r-container.r-accept .r-container-images{
         display: flex;
         flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
     }
 
     .r-container.r-accept .r-container-images .r-image-float{
         position: initial;
+        width: 150px;
     }
 
 }
