@@ -73,8 +73,14 @@ body.r-validation{
     display: none;
 }
 
-.r-container.r-accept .r-accept-items, .r-container.r-deny .r-deny-items, .r-container.r-deny .r-buttons.r-initial{
+.r-container.r-accept .r-accept-items, .r-container.r-deny .r-deny-items, .r-container.r-deny .r-buttons.r-initial, .r-container.r-deny .r-main-header.r-initial{
     display: inherit;
+}
+
+.r-container.r-accept .r-accept-items.r-button-download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .r-main-header{
@@ -115,7 +121,7 @@ button{
     transition: 0.3s ease-in
 }
 
-button svg{
+button:not(.r-button-download) svg{
     position: absolute;
     top: 8%;
     right: 0;
@@ -123,12 +129,12 @@ button svg{
     opacity: 0;
 }
 
-button:hover svg{
+button:not(.r-button-download):hover svg{
     width: 100%;
     opacity: 1;
 }
 
-button:hover span{
+button:not(.r-button-download):hover span{
     opacity: 0;
 }
 
@@ -164,6 +170,37 @@ button.r-button-no{
 button.r-button-no svg{
     color: #ddb6b6ed;
 }
+
+
+
+a.r-button-download{
+    width: 30%;
+    margin: 20px;
+    padding: 25px 60px;
+    font-size: 30px;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+    background: #c3213c;
+    border: 3px solid #c3213c;
+    color: #fddfe5;
+}
+
+a.r-button-download a{
+    text-decoration: none;
+    color: #fddfe5;
+}
+
+
+a.r-button-download svg{
+    
+    animation: palpitar 2s infinite ease-in-out;
+}
+
+a.r-button-download:hover{
+    background: #94061e;
+}
+
+
 
 .margin-right{
     margin-right: 10px;
@@ -260,7 +297,7 @@ button.r-button-no svg{
         flex-direction: column;
     }
 
-    button{
+    button, a.r-button-download{
         position: relative;
         width: 100%;
         margin: 5px;
@@ -270,11 +307,15 @@ button.r-button-no svg{
         transition: 0.3s ease-in
     }
     
+    a.r-button-download{
+        width: 60%;
+    }
+
     .r-main-header {
         font-size: 30px;
         color: #7d001a;
         text-align: center;
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .r-container.r-accept .r-container-images{
